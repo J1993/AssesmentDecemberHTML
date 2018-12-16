@@ -1,0 +1,342 @@
+:root{
+    /*COLOURS*/
+    --white: #ffffff;
+    --grey75: #757575;
+    --black25: rgb(0, 0, 0, 0.25);
+    --black95: rgb(0, 0, 0, 0.95);
+
+    /*FONTS*/
+    --fontSource: 'Source Sans Pro', sans-serif;
+    --fontBre: 'Bree Serif', serif;
+    --fontDancing: 'Dancing Script', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: var(--white);
+}
+
+body{
+    background-image: url("images/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Mobile resolution*/
+@media only screen and (max-width: 425px){
+
+    .header{
+        margin-bottom: 5%; 
+        padding: 0 3%;
+    }
+
+    .logo{
+        display: block;
+        width: 60%;
+        padding: 0 0 8% 0 ;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*Hamburguer Menu*/
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 50px;
+        left: 0px;
+        
+        z-index: 2;
+        
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /*Checkbox*/
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -60px;
+        left: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide the checkbox */
+        z-index: 3; /* and place it over the hamburger */
+        
+        -webkit-touch-callout: none;
+    }
+
+    /*The text menu after the hambuerguer menu*/
+    #menuToggle label {
+        position: absolute;
+        top: -57px;
+        left: 50px;
+        font-family: var(--fontSource);
+        z-index: 3;
+        font-size: 22px;
+    }
+
+    /* Hamburger icon*/
+    #menuToggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        top: -53px;
+        left: 10px;
+        
+        background: var(--white);
+        border-radius: 3px;
+        
+        z-index: 2;
+        
+        transform-origin: 0;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* Transform all the slices of hamburger into a crossmark.*/
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: var(--white);
+    }
+
+    /*Hiding the middle one.*/
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*The last bar should go the other direction*/
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #menu {
+        position: absolute;
+        width: 100%;
+        margin: -100px 0 0 -50px;
+        padding: 50px 50px 10px 50px;
+
+        font-family: var(--fontSource);
+        
+        background: var(--black95);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    /*Each element of the list*/
+    #menu li {
+    padding: 10px 10px;
+    font-size: 18px;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul {
+    transform: none;
+    }
+
+    /*Hide the alternative navigation bar*/
+    .navigationBar {
+        display: none;
+    }
+    /*End Hamburguer menu*/
+
+    .main {
+        padding: 0 3% 3% 3%;
+    }
+
+    /*Welcome section*/
+    .welcomeSection h2 {
+        position: relative;
+        color: #000000;
+        text-align: center;
+        font-family: var(--fontDancing);
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 0 5%;
+        z-index: 1;
+    }
+
+    .welcomeSection p {
+        position: relative;
+        background-color: var(--black25);
+        border-radius: 5px;
+        box-shadow: 5px 5px 20px #000000;
+        text-align: center;
+        font-family: var(--fontSource);
+        line-height: 2;
+        padding: 7% 5% 2% 5%;
+        top: -15px;
+    }
+    /*End Welcome section*/
+
+    .hrWelcome {
+        border-color: rgb(255, 255, 255, 0.3);
+        margin-bottom: 10%;
+    }
+
+    /*Services section*/
+    .services {
+        /*background-color: rgb(158, 158, 158, 0.3);*/
+        background-color: var(--black25);
+        box-shadow: 5px 5px 20px #000000;
+        border-radius: 5px;
+        padding-bottom: 1%;
+    }
+
+    .services h2 {
+        position: relative;
+        top:-15px;
+        color: #000000;
+        text-align: center;
+        font-family: var(--fontDancing);
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 0 5%;
+    }
+
+    /*General attributes for each section service*/
+    .tearoomSection, .craftShopSection, .generalShopSection, .postOfficeSection, .breakfastSection {
+        background-position: center;
+        background-size: cover;
+        border: 1px solid #000000;
+        margin: 0 5% 5% 5%;
+    }
+
+    /*Setting the image for each section service*/
+    .tearoomSection {
+        background-image: url(/images/tearoom.jpg);
+    }
+
+    .craftShopSection {
+        background-image: url(/images/craftshop.jpg);
+    }
+
+    .generalShopSection {
+        background-image: url(/images/generalvillageshop.jpg);
+    }
+
+    .postOfficeSection {
+        background-image: url(/images/postoffice.jpg);
+    }
+
+    .breakfastSection {
+        background-image: url(/images/breakfast.jpg);
+    }
+
+    /*Setting the attributes for all the info of the sections*/
+    .servicesInfo {
+        background-color: rgb(0, 0, 0, 0.7);
+        padding: 3% 0;
+    }
+
+    .servicesInfo h3 {
+        font-family: var(--fontBre);
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 2%;
+    }
+
+    .servicesInfo hr {
+        margin: 2% 5%;
+    }
+
+    .servicesInfo p {
+        margin: 3%;
+        font-family: var(--fontSource);
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .servicesInfo a {
+        display: block;
+        width: 50%;
+        margin: 2% auto 0 auto;
+        padding: 2% 5%;
+        text-align: center;
+        color: #000000;
+        background-color: #ffffff;
+        transition: 500ms;
+        font-family: var(--fontBre);
+    }
+
+    .servicesInfo a:hover {
+        color: #ffffff;
+        background-color: #000000;
+    }
+    /*End Services section*/
+
+    /*Footer*/
+    .footer {
+        background-color: #000000;
+        padding: 3%;
+    }
+
+    .author {
+        text-align: center;
+    }
+
+    .author img {
+        width: 30%;
+        padding: .1%;
+        border: 3px solid #ffffff;
+        border-radius: 100px;
+    }
+
+    .author p {
+        color: var(--grey75);
+        font-family: var(--fontSource);
+        line-height: 1.7;
+    }
+
+    .author p:nth-child(1), p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .author p:nth-child(3), p:nth-child(4) {
+        font-size: 12px;
+    }
+    /*End Footer*/
+}
+/*End mobile resolution*/    
+
+.navItems {
+        font-family: var(--fontSource);
+    }
+
+    .navItems > li{
+        padding: 1.5% 0 1.5% 0;
+        font-size: 1.2rem;
+    }

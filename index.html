@@ -4,18 +4,53 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Chollerton Tearooms - Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Source+Sans+Pro" rel="stylesheet">
     </head>
     <body>
 
-        <header>
+        <!--####### HEADER #######-->
+        <header class="header">
 
-            <img src="images/logo-white.png" alt="chollerton-logo">
+            <img src="images/logo-white.png" alt="chollerton-logo" class="logo">
 
-            <nav>
+            <!--### Mobile phone Navigation Bar ####-->
+            <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" /> <label>Menu</label>
+                
+                
+                <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                  <a href="#"><li>Home</li></a>
+                  <a href="#"><li>Find out more</li></a>
+                  <a href="#"><li>Admin</li></a>
+                  <a href="#"><li>Credits</li></a>
+                  <a href="#"><li>Wireframe</li></a>
+                </ul>
+            </div>
 
-                <ul>
+            <!--### Navigation Bar ####-->
+            <nav class="navigationBar">
+
+                <ul class="navItems">
                     <li>Home</li>
                     <li>Find out more</li>
                     <li>Admin</li>
@@ -26,55 +61,154 @@
             </nav>
 
         </header>
+        <!--####### END HEADER #######-->
 
-        <div>
-
-            <section>
-
-                <h2>Welcome</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    In ipsum tellus, fermentum ac augue vel, fermentum mollis odio.
-                    Aliquam facilisis sit amet est a sagittis.</p>
-
-            </section>
-
-            <hr>
-
-        </div>
-
-        <div>
-
-            <h2>Services</h2>
-
-            <section>
-
-                <div>
-                    <h3>Tearoom</h3>
-
-                    <hr>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin sodales magna ut nunc ullamcorper, vel commodo diam
-                        aliquam. Curabitur vulputate, augue non blandit rhoncus,
-                        nisl augue commodo leo, eget imperdiet ligula mauris in massa.
-                        Proin ultricies hendrerit eleifend. Duis auctor malesuada
-                        est sed varius. Proin convallis tellus lorem, consectetur
-                        condimentum purus convallis ut. Nulla vehicula sed odio et
-                        interdum.</p>
-                </div>
-
-                <a href="#">Find out more...</a>
-
-            </section>
-
-        </div>
-
-        <footer>
-
+        <!--####### MAIN #######-->
+        <main class="main">
             <div>
+                <section class="welcomeSection">
 
-                <img src="images/user.png" alt="author's image">
+                        <h2>Welcome</h2>
+        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            In ipsum tellus, fermentum ac augue vel, fermentum mollis odio.
+                            Aliquam facilisis sit amet est a sagittis.</p>
+        
+                </section>
+            </div>
+            
+    
+            <hr class="hrWelcome">
+
+            <div class="services">
+
+                    <h2>Services</h2>
+        
+                    <!--#### TEAROOM ####-->
+                    <section class="tearoomSection">
+        
+                        <div class="servicesInfo">
+                            <h3>Tearoom</h3>
+        
+                            <hr>
+        
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin sodales magna ut nunc ullamcorper, vel commodo diam
+                                aliquam. Curabitur vulputate, augue non blandit rhoncus,
+                                nisl augue commodo leo, eget imperdiet ligula mauris in massa.
+                                Proin ultricies hendrerit eleifend. Duis auctor malesuada
+                                est sed varius. Proin convallis tellus lorem, consectetur
+                                condimentum purus convallis ut. Nulla vehicula sed odio et
+                                interdum.</p>
+                        
+                            <a href="#">Find out more...</a>
+                        </div>
+
+                    </section>
+                    <!--#### END TEAROOM ####-->
+
+                    <!--#### CRAFTSHOP ####-->
+                    <section class="craftShopSection">
+        
+                            <div class="servicesInfo">
+                                <h3>Craft Shop</h3>
+            
+                                <hr>
+            
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Proin sodales magna ut nunc ullamcorper, vel commodo diam
+                                    aliquam. Curabitur vulputate, augue non blandit rhoncus,
+                                    nisl augue commodo leo, eget imperdiet ligula mauris in massa.
+                                    Proin ultricies hendrerit eleifend. Duis auctor malesuada
+                                    est sed varius. Proin convallis tellus lorem, consectetur
+                                    condimentum purus convallis ut. Nulla vehicula sed odio et
+                                    interdum.</p>
+                            
+                                <a href="#">Find out more...</a>
+                            </div>
+    
+                    </section>
+                    <!--#### END CRAFTSHOP ####-->
+
+                    <!--#### GENERAL SHOPS ####-->
+                    <section class="generalShopSection">
+        
+                            <div class="servicesInfo">
+                                <h3>General Shops</h3>
+            
+                                <hr>
+            
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Proin sodales magna ut nunc ullamcorper, vel commodo diam
+                                    aliquam. Curabitur vulputate, augue non blandit rhoncus,
+                                    nisl augue commodo leo, eget imperdiet ligula mauris in massa.
+                                    Proin ultricies hendrerit eleifend. Duis auctor malesuada
+                                    est sed varius. Proin convallis tellus lorem, consectetur
+                                    condimentum purus convallis ut. Nulla vehicula sed odio et
+                                    interdum.</p>
+                            
+                                <a href="#">Find out more...</a>
+                            </div>
+    
+                    </section>
+                    <!--#### END GENERAL SHOPS ####-->                    
+
+                    <!--#### POST OFFICE ####-->
+                    <section class="postOfficeSection">
+        
+                            <div class="servicesInfo">
+                                <h3>Post Office</h3>
+            
+                                <hr>
+            
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Proin sodales magna ut nunc ullamcorper, vel commodo diam
+                                    aliquam. Curabitur vulputate, augue non blandit rhoncus,
+                                    nisl augue commodo leo, eget imperdiet ligula mauris in massa.
+                                    Proin ultricies hendrerit eleifend. Duis auctor malesuada
+                                    est sed varius. Proin convallis tellus lorem, consectetur
+                                    condimentum purus convallis ut. Nulla vehicula sed odio et
+                                    interdum.</p>
+                            
+                                <a href="#">Find out more...</a>
+                            </div>
+    
+                    </section>
+                    <!--#### END POST OFFICE ####-->
+                        
+                    <!--#### BED AND BREAKFAST ####-->
+                    <section class="breakfastSection">
+        
+                            <div class="servicesInfo">
+                                <h3>Bed & Breakfast</h3>
+            
+                                <hr>
+            
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Proin sodales magna ut nunc ullamcorper, vel commodo diam
+                                    aliquam. Curabitur vulputate, augue non blandit rhoncus,
+                                    nisl augue commodo leo, eget imperdiet ligula mauris in massa.
+                                    Proin ultricies hendrerit eleifend. Duis auctor malesuada
+                                    est sed varius. Proin convallis tellus lorem, consectetur
+                                    condimentum purus convallis ut. Nulla vehicula sed odio et
+                                    interdum.</p>
+                            
+                                <a href="#">Find out more...</a>
+                            </div>
+    
+                    </section>
+                    <!--#### END BED AND BREAKFAST ####-->
+
+                </div>
+        </main>
+        <!--####### END MAIN #######-->
+
+        <!--####### FOOTER #######-->
+        <footer class="footer">
+
+            <div class="author">
+
+                <img src="images/user.jpg" alt="author's image">
 
                 <div>
 
@@ -119,7 +253,7 @@
             </div>
 
         </footer>
-
+        <!--####### END FOOTER #######-->
     </body>
 
 </html>
