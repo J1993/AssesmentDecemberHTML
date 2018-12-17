@@ -29,6 +29,7 @@ body{
 /*Mobile resolution*/
 @media only screen and (max-width: 425px){
 
+    /*############# HEADER ################*/
     .header{
         margin-bottom: 5%; 
         padding: 0 3%;
@@ -138,7 +139,7 @@ body{
         position: absolute;
         width: 100%;
         margin: -100px 0 0 -50px;
-        padding: 50px 50px 10px 50px;
+        padding: 50px 0px 10px 62px;
 
         font-family: var(--fontSource);
         
@@ -171,7 +172,9 @@ body{
         display: none;
     }
     /*End Hamburguer menu*/
-
+    /*########## END HEADER #############*/
+    
+    /*############ MAIN #################*/
     .main {
         padding: 0 3% 3% 3%;
     }
@@ -297,13 +300,15 @@ body{
         background-color: #000000;
     }
     /*End Services section*/
-
-    /*Footer*/
+    /*###########END MAIN ##############*/
+    
+    /*########### FOOTER ###############*/
     .footer {
         background-color: #000000;
         padding: 3%;
     }
 
+    /*Author div*/
     .author {
         text-align: center;
     }
@@ -328,7 +333,58 @@ body{
     .author p:nth-child(3), p:nth-child(4) {
         font-size: 12px;
     }
-    /*End Footer*/
+    /*End Author div*/
+    
+    /*hr tag*/
+    footer hr {
+        margin: 5% 0;
+    }
+    
+    /*Menu div*/
+    .menuFooter h4, a {
+        color: var(--grey75);
+        font-family: var(--fontSource);
+    }
+    
+    .menuFooter h4 {
+        padding-left: 5%;
+        font-size: 18px;
+    }
+    
+    .menuFooter ul li {
+        padding-left: 10%;
+        line-height: 35px;
+    }
+
+    .menuFooter a:hover {
+        color: #ffffff;
+    }
+    
+    /*Info div*/
+    .infoFooter {
+        padding: 0 5%;
+        font-family: var(--fontSource);
+    }
+
+    .infoFooter div {
+        display: flex;
+        padding: 3% 0;
+    }
+    
+    .infoFooter img {
+        width: 5%;
+        height: 7%;
+        margin-right: 5%;
+    }
+    
+    .infoFooter p {
+        color: var(--grey75);
+        font-size: 14px;
+        box-align: center;
+    }
+    
+    
+    /*########### END FOOTER ###############*/
 }
 /*End mobile resolution*/    
 
@@ -340,3 +396,9 @@ body{
         padding: 1.5% 0 1.5% 0;
         font-size: 1.2rem;
     }
+
+
+
+
+
+
