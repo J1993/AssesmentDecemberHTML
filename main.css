@@ -444,7 +444,7 @@ body{
     }
     
     .welcomeSection {
-        width: 40%;
+        width: 300px;
         padding: 10% 5%;
     }
     
@@ -453,6 +453,7 @@ body{
         color: #000000;
         text-align: center;
         font-family: var(--fontDancing);
+        font-size: 22px;
         background-color: #ffffff;
         border-radius: 5px;
         margin: 0 5%;
@@ -466,8 +467,9 @@ body{
         box-shadow: 5px 5px 20px #000000;
         text-align: center;
         font-family: var(--fontSource);
-        line-height: 3;
-        padding: 7% 5% 2% 5%;
+        font-size: 16px;
+        line-height: 2.5;
+        padding: 7% 8% 2% 8%;
         top: -15px;
     }
     
@@ -483,7 +485,8 @@ body{
 
     /*Services section*/
     .services {
-        /*background-color: rgb(158, 158, 158, 0.3);*/
+        width: 700px;
+        margin: 0 auto;
         background-color: var(--black25);
         box-shadow: 5px 5px 20px #000000;
         border-radius: 5px;
@@ -546,7 +549,17 @@ body{
         background-color: rgb(0, 0, 0, 0.7);
         padding: 3% 0;
     }
+    
+    .servicesInfo > h3, .servicesInfo hr, .servicesInfo p, .servicesInfo a {
+        opacity: 0;
+    }
 
+    .servicesInfo:hover > h3, .servicesInfo:hover hr, .servicesInfo:hover p, .servicesInfo:hover a {
+        opacity: 1;
+        transition: 700ms;
+        cursor: default;
+    }
+    
     .servicesInfo h3 {
         font-family: var(--fontBre);
         font-size: 20px;
@@ -568,22 +581,131 @@ body{
 
     .servicesInfo a {
         display: block;
-        width: 50%;
+        width: 150px;
+        height: 20px;
         margin: 2% auto 0 auto;
         padding: 2% 5%;
         text-align: center;
         color: #000000;
         background-color: #ffffff;
-        transition: 500ms;
         font-family: var(--fontBre);
     }
 
     .servicesInfo a:hover {
         color: #ffffff;
         background-color: #000000;
+        transition: 700ms;
     }
     /*End Services section*/
+    /*###########END MAIN ##############*/
     
+    /*########### FOOTER ###############*/
+    .footer {
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        height: 250px;
+        padding: 0 3%;
+    }
+
+    /*Author div*/
+    .author {
+        display: flex;
+        text-align: center;
+        width: 350px;
+        height: 150px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .author img {
+        width: 80px;
+        height: 83px;;
+        padding: .1%;
+        border: 3px solid #ffffff;
+        border-radius: 100px;
+    }
+
+    .author p {
+        margin-left: 5%;
+        color: var(--grey75);
+        font-family: var(--fontSource);
+        line-height: 1.7;
+    }
+
+    .author p:nth-child(1), .author p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .author p:nth-child(3), .author p:nth-child(4) {
+        font-size: 12px;
+    }
+    /*End Author div*/
+    
+    /*hr tag*/
+    footer hr {
+        margin: 7% 1%;
+    }
+    
+    /*Menu div*/
+    .menuFooter {
+        width: 200px;
+        height: 150px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .menuFooter h4, .menuFooter a {
+        color: var(--grey75);
+        font-family: var(--fontSource);
+    }
+    
+    .menuFooter h4 {
+        padding-left: 5%;
+        font-size: 18px;
+    }
+    
+    .menuFooter ul li {
+        padding-left: 10%;
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    .menuFooter a:hover {
+        color: #ffffff;
+        transition: 300ms;
+    }
+    
+    /*Info div*/
+    .infoFooter {
+        height: 150px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--fontSource);
+        width: 300px;
+    }
+
+    .infoFooter div {
+        display: flex;
+        padding: 3% 5%;
+    }
+    
+    .infoFooter img {
+        width: 5%;
+        height: 7%;
+        margin-right: 5%;
+    }
+    
+    .infoFooter p {
+        color: var(--grey75);
+        font-size: 14px;
+    }
+    
+    
+    /*########### END FOOTER ###############*/
 }
 
 
