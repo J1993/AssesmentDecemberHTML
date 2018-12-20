@@ -20,7 +20,7 @@
 }
 
 body{
-    background-image: url("images/background.jpg");
+    background-image: url(images/background.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -475,7 +475,6 @@ body{
     
     .carrousel {
         width: 60%;
-        
     }
     
     .hrWelcome {
@@ -509,7 +508,8 @@ body{
         background-position: center;
         background-size: cover;
         border: 1px solid #000000;
-        margin: 0 2% 5% 2%;
+        margin: 0 2% 3% 2%;
+        background-image: url(images/tearoom.jpg);
     }
     
     .craftShopSection, .generalShopSection, .postOfficeSection, .breakfastSection {
@@ -517,47 +517,46 @@ body{
         background-size: cover;
         border: 1px solid #000000;
         margin: 0 2% 5% 2%;
+        width: 50%;
     }
 
     /*Setting the image for each section service*/
-    .tearoomSection {
-        background-image: url(/images/tearoom.jpg);
-    }
 
     .sectionTogether {
         display: flex;
+        height: 350px;
     }
     
     .craftShopSection {
-        background-image: url(/images/craftshop.jpg);
+        background-image: url(images/craftshop.jpg);
     }
 
     .generalShopSection {
-        background-image: url(/images/generalvillageshop.jpg);
+        background-image: url(images/generalvillageshop.jpg);
     }
 
     .postOfficeSection {
-        background-image: url(/images/postoffice.jpg);
+        background-image: url(images/postoffice.jpg);
     }
 
     .breakfastSection {
-        background-image: url(/images/breakfast.jpg);
+        background-image: url(images/breakfast.jpg);
     }
 
     /*Setting the attributes for all the info of the sections*/
     .servicesInfo {
+        height: 294px;
         background-color: rgb(0, 0, 0, 0.7);
-        padding: 3% 0;
+        padding-top: 20px;
     }
     
-    .servicesInfo > h3, .servicesInfo hr, .servicesInfo p, .servicesInfo a {
+    .servicesInfo hr, .servicesInfo p, .servicesInfo a {
         opacity: 0;
     }
 
-    .servicesInfo:hover > h3, .servicesInfo:hover hr, .servicesInfo:hover p, .servicesInfo:hover a {
+    .servicesInfo:hover hr, .servicesInfo:hover p, .servicesInfo:hover a {
         opacity: 1;
         transition: 700ms;
-        cursor: default;
     }
     
     .servicesInfo h3 {
